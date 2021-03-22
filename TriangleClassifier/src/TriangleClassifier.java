@@ -1,4 +1,7 @@
 
 public class TriangleClassifier {
-//ooga booga
+
+	public static String isValidTriangle(int a, int b, int c) {
+		
+	}
 }
