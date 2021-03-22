@@ -35,6 +35,23 @@ public class TriangleClassifier {
 		}
 		return triangleSide;
 	}
-	
-}
 
+	public static String getClassification(int a, int b, int c) {
+		boolean validTriangle = isValidTriangle(a, b, c);
+		String triangleAngle = classifyByAngle(a, b, c);
+		String triangleSide = classifyBySide(a, b, c);
+		String invalid = "INVALID";
+		if (validTriangle == true) {
+			if (triangleSide != "equilateral") {
+				return triangleAngle + ' ' + triangleSide;
+			}
+			else if (triangleSide == "equilateral") {
+				return triangleSide;
+			}
+			else {
+				return invalid;
+			}
+		}
+		return invalid;
+	}
+}
